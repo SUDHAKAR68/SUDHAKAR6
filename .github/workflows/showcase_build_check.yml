@@ -34,7 +34,7 @@ jobs:
           persist-credentials: false
 
       - name: Detect changed paths
-        uses: dorny/paths-filter@fbd0ab8f3e69293af611ebaee6363fc25e6d187d # v4.0.1
+        uses: dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d # v4.0.3
         id: filter
         with:
           filters: |
@@ -196,7 +196,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Depot
-        uses: depot/setup-action@15c09a5f77a0840ad4bce955686522a257853461 # v1
+        uses: depot/setup-action@91bc8495a33ebfc504ffc89e5674379ccf23c29c # v1
 
       - name: Prepare build args
         id: build-args
@@ -240,7 +240,7 @@ jobs:
           done
 
       - name: Build Docker image (no push)
-        uses: depot/build-push-action@98e78adca7817480b8185f474a400b451d74e287 # v1.18.0
+        uses: depot/build-push-action@0f27be7c41d76663a98518dfe68f1c46582242c4 # v1.19.0
         with:
           project: m2kw2wmmcp
           context: ${{ matrix.service.context }}
